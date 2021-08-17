@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<body></body>
+
+<div id="root"></div>
+
+<script>
+  const arr = [1, 2, 3];
+
+  console.error(root);
+
+  class Component {
+    constructor(data = []) {
+      this.data = data;
+      this.render();
+    }
+
+    render () {
+      const element = document.createElement('div');
+
+      element.innerHTML = `
+        <h1>Hello, <span style="color: green">World!</span>
+          ${this.data.join(' ')}
+        </h1>
+      `;
+
+      this.element = element;
+    }
+  }
+
+  const obj = new Component(arr);
+  // const rootElement = document.getElementById('root');
+
+  root.append(obj.element);
+</script>
+
