@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<body>
+  <button id="btn">Click me maybe!</button>
+  <div id="root"></div>
+</body>
+
+<script type="module">
+  const btn = document.getElementById('btn');
+
+
+  window.addEventListener('pointermove', event => {
+    console.error(event);
+  });
+  // btn.removeEventListener('click', onClick, { capture: true });
+</script>
+
+
+
+<!--<script>-->
+<!--  class Component {-->
+<!--    array = [1, 2, 3];-->
+
+<!--    constructor() {-->
+<!--      this.render();-->
+
+<!--      this.addEventListeners();-->
+<!--    }-->
+
+<!--    handler = event => {-->
+<!--      console.error(event);-->
+<!--      console.error('element', this.element);-->
+<!--    }-->
+
+<!--    show (element) {-->
+<!--      console.error('element', element);-->
+<!--    }-->
+
+<!--    showArrayElements () {-->
+<!--      // const self = this;-->
+
+<!--      this.array.forEach((item) => {-->
+<!--        this.show(item);-->
+<!--      });-->
+<!--    }-->
+
+<!--    render () {-->
+<!--      const element = document.createElement('div');-->
+
+<!--      element.innerHTML = `<h2>Hello my Component</h2>`;-->
+
+<!--      this.element = element;-->
+<!--    }-->
+
+<!--    addEventListeners() {-->
+<!--      this.element.addEventListener('click', this.handler);-->
+<!--      this.element.removeEventListener('click', this.handler);-->
+<!--    }-->
+<!--  }-->
+
+<!--  const component = new Component();-->
+
+<!--  component.showArrayElements();-->
+
+<!--  root.append(component.element);-->
+<!--</script>-->

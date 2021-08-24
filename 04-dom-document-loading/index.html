@@ -6,5 +6,55 @@
 </body>
 
 <script>
+  class Component {
+    // onClick = event => {
+    //   console.error(event);
+    //   console.error(this.componentName);
+    // }
 
+    constructor () {
+      this.componentName = 'Foo Bar Component';
+      this.render();
+      this.onClick = this.onClick.bind(this);
+      this.addEventListeners();
+    }
+
+    render () {
+      const element = document.createElement('div');
+
+      element.innerHTML = `
+        <div>
+          <h1>Component</h1>
+          click me
+        </div>
+      `;
+
+      this.element = element;
+    }
+
+    onClick () {
+      console.error(event);
+      console.error(this.componentName);
+    }
+
+    addEventListeners () {
+      this.element.addEventListener('click', this.onClick);
+    }
+
+    remove () {
+      this.element.remove();
+    }
+
+    destroy () {
+      // this.remove();
+
+      this.element.removeEventListener('click', this.onClick);
+    }
+  }
+
+  const component = new Component();
+
+  // component.destroy();
+
+  root.append(component.element);
 </script>
