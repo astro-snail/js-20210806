@@ -78,7 +78,7 @@ describe('dom-document-loading/notification', () => {
     expect(notificationMessage.element).toHaveClass('error');
   });
 
-  it('should have ability to define target element for rendering ', () => {
+  it('should have ability to define target element for rendering', () => {
     notificationMessage = new NotificationMessage('hi');
     const div = document.createElement('div');
 

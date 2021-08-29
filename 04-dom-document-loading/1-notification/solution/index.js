@@ -47,17 +47,15 @@ export default class NotificationMessage {
       this.remove()
     }, this.duration);
 
-    this.timerId = setTimeout(() => {
-      this.remove();
-    }, this.duration);
-
     NotificationMessage.activeNotification = this;
   }
 
   remove() {
     clearTimeout(this.timerId);
 
-    this.element.remove();
+    if (this.element) {
+      this.element.remove();
+    }
   }
 
   destroy() {
