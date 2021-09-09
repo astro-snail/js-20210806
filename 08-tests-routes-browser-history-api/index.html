@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script>
+  const url = new URL('https://api.google.com');
+  const description = "Rock & Roll";
+
+  url.searchParams.set('description', description);
+
+  console.error('url', url);
+  console.error('url.toString()', url.toString());
+
+</script>
