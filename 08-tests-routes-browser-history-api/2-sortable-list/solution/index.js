@@ -169,12 +169,10 @@ export default class SortableList {
   }
 
   dispatchEvent (type, details) {
-
     this.element.dispatchEvent(new CustomEvent(type, {
       bubbles: true,
       details
     }));
-
   }
 
   remove () {
